@@ -1,0 +1,45 @@
+### CRUD_D_E.http, este archivo contiene las peticiones HTTP para probar la API de CRUD de Departamentos y Empleados
+@CRUD_D_E_HostAddress = http://localhost:5218 
+
+### Crear departamento
+POST {{CRUD_D_E_HostAddress}}/api/Departamento ## se especifica la ruta para crear un departamento
+Content-Type: application/json
+
+{
+  "nombre": "Recursos Humanos"
+
+}
+### Crear departamento
+POST {{CRUD_D_E_HostAddress}}/api/Departamento ## se especifica la ruta para crear un departamento
+Content-Type: application/json
+{
+  "nombre": "Tecnología"
+}
+
+### Ver todos los departamentos
+GET {{CRUD_D_E_HostAddress}}/api/Departamento ## se especifica la ruta para ver todos los departamentos
+
+### Crear empleado
+POST {{CRUD_D_E_HostAddress}}/api/Empleado ## se especifica la ruta para crear un empleado
+Content-Type: application/json
+
+{
+  "nombre": "Juan Pérez",
+  "IdDepartamento": 1,
+  "Salario": 50000,
+  "Estatus": 1
+}
+
+### Crear empleado inactivo
+POST {{CRUD_D_E_HostAddress}}/api/Empleado ## se especifica la ruta para crear un empleado
+Content-Type: application/json
+
+{
+  "nombre": "María López",
+  "IdDepartamento": 1,
+  "Salario": 55000,
+  "Estatus": 0
+}
+
+### Ver todos los empleados
+GET {{CRUD_D_E_HostAddress}}/api/Empleado ## se especifica la ruta para ver todos los empleados 
